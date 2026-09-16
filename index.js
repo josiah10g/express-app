@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: true}))
 app.get('/', (req, res) => {
     const value = parseInt(req.query.value)
     if(!value){
-        res.sendStatus(404).json({
+        res.status(404).json({
             message: 'You must include a query'
         })
     }
